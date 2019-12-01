@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dozariha</title>
+    <!-- #ToDo:load css from CDN s -->
+    <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom_css.css' %}">
+</head>
+<body>
+    <header class='col s12 col m12 col l12'>
+        <div class="card-panel teal lighten-2">
+            this is a test for menu
+        </div>
+    </header>
+    <container>
+        <div class="col m10 card-panel yellow">
+                <ul>
+                    {% for item in comments %}
+                    <li>
+                        {{item.Influencer}}
+                        --
+                        {{item.comment_text}}
+                        
+                        
+                    </li>
+
+                    {%endfor%}
+                </ul>
+                
+
+        </div>
+    </container>
+    <footer></footer>
+</body>
+</html>
