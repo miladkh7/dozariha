@@ -29,7 +29,6 @@ def submit_comment(request):
 
 def autocompleteModel(request):
     if request.is_ajax():
-        print('salam')
         q = request.GET.get('term', '').capitalize()
         print(q)
         # qq=get_object_or_404(Influencer, profile_name__startswith=q))
