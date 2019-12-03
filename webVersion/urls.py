@@ -23,7 +23,8 @@ from django.conf import settings
 urlpatterns = [
     # path('admin/', admin.site.urls),
     url(r'^home',views.index),
-    url(r'^submit_comment/',views.submit_comment,name='submit')
+    url(r'^submit_comment/',views.submit_comment,name='submit'),
+    url(r'^ajax_calls/search/',views.autocompleteModel,name='search'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # urlpatterns+=static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
