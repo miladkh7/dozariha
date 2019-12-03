@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from .models import Comment,Influencer
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 def index(request):
@@ -15,11 +15,12 @@ def index(request):
 
 @csrf_exempt
 def submit_comment(request):
-    print('we are heare')
     infulncerID=request.POST['INFLUNCER']
     comment=request.POST['COMMENT']
-    this_influncer=Influencer.objects.filter(profile_name=infulncerID).get()
     # print("Influncer:{} - comment:{}".format(infulncerID,comment))
-    Comment.objects.create(Influencer=this_influncer,comment_text=comment,state="approve")
-    
-    return HttpResponse("status:ok")
+    # print('success')
+    # this_influncer=Influencer.objects.filter(profile_name=infulncerID).get()
+    this_influncer=get_object_or_404(Influencer, profile_name=infulncerID)
+    if this_influncer:
+        Comment.objects.create(Influencer=this_influncer,comment_text=comment,state="approve")
+        return HttpResponseRedirect('/home/')
