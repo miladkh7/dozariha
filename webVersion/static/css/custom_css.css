@@ -1,6 +1,7 @@
 .profileText{
     text-align: center;
     height: 80px;
+    color: blue;
 }
 .profilePic{
     height: 150px;
@@ -43,7 +44,6 @@ body
 }
 .flex-item
 {
-  background-color: tomato;
   text-align: center;
   line-height: 2;
   color: #fff;
@@ -51,10 +51,6 @@ body
   font-size: 1em;
 }
 
-.flex-item:nth-child(odd)
-{
-  background-color: #e43;
-}
 .card-panel{
     padding: 10px !important;
 }

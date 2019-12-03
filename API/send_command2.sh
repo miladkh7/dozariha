@@ -1,0 +1,1 @@
+curl --data "INFLUNCER=$1&COMMENT=$2" Http://localhost:8000/submit_comment/
