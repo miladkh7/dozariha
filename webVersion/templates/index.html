@@ -1,6 +1,8 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,30 +12,60 @@
     <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
     <link rel="stylesheet" href="{% static 'css/custom_css.css' %}">
 </head>
+
 <body>
     <header class='col s12 col m12 col l12'>
         <div class="card-panel teal lighten-2">
             this is a test for menu
+
         </div>
     </header>
     <container>
-        <div class="col m10 card-panel yellow">
+
+
+            <div class="col m10 s11 card-pane blue-grey l center-align">
+
+                <div class="row">
+
+
+                </div>
                 <ul>
                     {% for item in comments %}
                     <li>
-                        {{item.Influencer}}
-                        --
-                        {{item.comment_text}}
-                        
-                        
+                        <div class="row flex-container blue-grey ">
+                            <div class="flex-item col s3 col xs4 card-panel grey lighten-2">
+                                <div class="row card-panel blue profilePic">
+                                    <img src="{{item.Influencer.profile_pic.url}}"
+                                        alt="profile picture of {{item.Influencer.profile_name}}">
+
+
+                                </div>
+                                <div class="row card-panel blue profileText">
+
+                                    {{item.Influencer.name}}
+                                    <br>
+                                    {{item.Influencer.profile_name}}
+
+                                </div>
+                            </div>
+                            <div class="flex-item col s9  col xs8 card-panel grey lighten-2">
+                                ddd
+                            </div>
+
+
+                        </div>
+                        <div class="divider"></div>
+
                     </li>
 
                     {%endfor%}
                 </ul>
-                
 
-        </div>
+
+            </div>
+
     </container>
     <footer></footer>
 </body>
+
 </html>

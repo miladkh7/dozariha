@@ -1,0 +1,60 @@
+.profileText{
+    text-align: center;
+    height: 80px;
+}
+.profilePic{
+    height: 150px;
+}
+
+
+.flex-container
+{
+  display: flex;
+    flex-direction: row;
+  flex-wrap: wrap;
+  /* flex-wrap: nowrap; */
+  /* flex-wrap: wrap-reverse; */
+}
+
+.flex-item
+{
+  margin: 10px 0;
+  flex-wrap: wrap;
+
+}
+
+/* خطوط پایین نقش زیبا سازی دارند مهم نیستن */
+
+body
+{
+  background-color: #1b1b1b;
+}
+
+.flex-container
+{
+  background-color: #fff;
+  margin-right: 10%;
+}
+.row{
+    margin-left: 1em !important;
+    margin-right: 1em !important; 
+    margin-top: 0em !important;
+    margin-top: 0em !important;
+}
+.flex-item
+{
+  background-color: tomato;
+  text-align: center;
+  line-height: 2;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.flex-item:nth-child(odd)
+{
+  background-color: #e43;
+}
+.card-panel{
+    padding: 10px !important;
+}

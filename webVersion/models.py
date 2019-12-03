@@ -4,7 +4,7 @@ from django.db import models
 class Influencer(models.Model):
     name=models.CharField(max_length=48)
     profile_name=models.CharField(max_length=48)
-    profile_pic=models.ImageField(null=True,upload_to= 'influencers/')
+    profile_pic=models.ImageField(null=True,upload_to='influencers/%y-%m/')
     profile_biography=models.TextField(null=True)
 
     def __str__(self):
